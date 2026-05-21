@@ -1,0 +1,6 @@
+.env.local
+.claude/
+data/
+check-db.cjs
+*.sql
+nul

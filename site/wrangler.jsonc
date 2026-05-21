@@ -1,0 +1,49 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "voxta-unoffical-docs",
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  },
+  "compatibility_date": "2025-08-15",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "D1",
+      "database_id": "81a16379-a14a-41b9-bfdd-bd0b57818138",
+      "database_name": "voxta-docs",
+      "remote": true
+    }
+  ],
+  "vectorize": [
+    {
+      "binding": "VECTORIZE",
+      "index_name": "voxta-docs-index"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "voxta-docs"
+    }
+  ],
+  "vars": {
+    "GITHUB_OWNER": "vega-holdings",
+    "GITHUB_REPO": "voxta_unoffical_docs"
+  }
+}

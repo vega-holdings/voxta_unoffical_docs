@@ -1,0 +1,9 @@
+{
+  "name": "voxta-docs-repo",
+  "private": true,
+  "scripts": {
+    "build": "cd site && npm install && npm run build && npx opennextjs-cloudflare build",
+    "deploy": "cd site && npx wrangler deploy",
+    "dev": "cd site && npm install && npm run dev"
+  }
+}
